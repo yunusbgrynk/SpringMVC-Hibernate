@@ -18,7 +18,7 @@ public class CustomerServiceImpl implements CustomerService {
 	private CustomerDAO customerDao;
 
 	@Override
-	@Transactional //define transactions at Service layer
+	@Transactional 
 	public List<Customer> getCustomers() {
 		return customerDao.getCustomers();
 	}
