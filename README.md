@@ -1,4 +1,6 @@
-# Spring MVC & Hibernate Web App
+# Spring MVC - Hibernate Web App
+
+Customer Registration Form
 
 It's my first beginner web app.
 In this project, I've created full working Spring MVC Hibernate application that connects to database.
