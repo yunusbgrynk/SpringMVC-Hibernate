@@ -18,14 +18,6 @@ import com.yunus.webproject.service.CustomerService;
 @RequestMapping("/customer")
 public class CustomerController {
 	
-	//Spring will scan for a component that implements CustomerDAO interface.
-	//need to inject the customer dao
-	//we canceled these transactions because moved functionality this to the service layer.
-	//So, we no longer gonna use the DAO directly.
-	//Instead, we gonna use that new layer.
-//	@Autowired
-//	private CustomerDAO customerDao;
-	
 	//inject customer Service
 	@Autowired
 	private CustomerService customerService;
