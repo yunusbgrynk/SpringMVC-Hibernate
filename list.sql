@@ -29,11 +29,11 @@ LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
 
 INSERT INTO `customer` VALUES 
-	(1,'Mehmet','Yilmaz','mehmet@gmail.ocm','TR'),
-	(2,'Duygu’,’Ay','duyguay@hotmail.com','TR'),
-	(3,'Hasan','Baykan','hsn85.baykan@gmail.com','TR'),
-	(4,'Gizem','Kurt','gizem@yahoo.com','TR'),
-	(5,'Murat','Ozmen','muratozmn@hotmail.com','TR');
+	(1,'name1','LastName1','email1','country1'),
+	(2,'name2’,’LastName2','email2','country2'),
+	(3,'name3','LastName3','email3','country3'),
+	(4,'name4','LastName4','email4','country4'),
+	(5,'name5','LastName5','email5','country5');
 
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
