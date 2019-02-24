@@ -14,20 +14,20 @@
 		http://www.springframework.org/schema/tx 
 		http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-	<!-- Add support for component scanning -->
+	
 	<context:component-scan base-package="com.yunus.webproject" />
 
-	<!-- Add support for conversion, formatting and validation support -->
+	
 	<mvc:annotation-driven/>
 
-	<!-- Define Spring MVC view resolver -->
+	
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/view/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
 
-    <!-- Step 1: Define Database DataSource / connection pool -->
+
 	<bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
           destroy-method="close">
         <property name="driverClass" value="com.mysql.cj.jdbc.Driver" />
@@ -35,14 +35,14 @@
         <property name="user" value="crform" />
         <property name="password" value="crf" /> 
 
-        <!-- these are connection pool properties for C3P0 -->
+     
 		<property name="initialPoolSize" value="5"/>
         <property name="minPoolSize" value="5" />
         <property name="maxPoolSize" value="20" />
         <property name="maxIdleTime" value="30000" />
 	</bean>  
 	
-    <!-- Step 2: Setup Hibernate session factory -->
+   
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<property name="dataSource" ref="myDataSource" />
@@ -55,16 +55,16 @@
 		</property>
    </bean>	  
 
-    <!-- Step 3: Setup Hibernate transaction manager -->
+   
 	<bean id="myTransactionManager"
             class="org.springframework.orm.hibernate5.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
     
-    <!-- Step 4: Enable configuration of transactional behavior based on annotations -->
+  
 	<tx:annotation-driven transaction-manager="myTransactionManager" />
 
-	<!-- Add support for reading web resources: css, images, js, etc ... -->
+	
 	<mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
 	
 	
