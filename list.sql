@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `customer_list` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE  IF NOT EXISTS `customer_list`
 USE `customer_list`;
 
 DROP TABLE IF EXISTS `customer`;
