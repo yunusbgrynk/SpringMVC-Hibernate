@@ -27,7 +27,7 @@ public class TestDbServlet extends HttpServlet {
 		String pass="crf";
 		String jdbcUrl="jdbc:mysql://localhost:3306/customer_registration_form?useSSL=false";
 		
-		//We also need to automatically load our driver since we're running it as a servlet.
+		
 		String driver="com.mysql.jdbc.Driver"; 
 		
 		
