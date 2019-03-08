@@ -14,8 +14,8 @@
 
 <nav role='navigation'>
   <ul>
-    <li><a href="http://localhost:8080/web-app-CRF/">Home</a></li>
-    <li><a href="http://localhost:8080/web-app-CRF/customer/showFormAdd">Add Customer</a></li>
+    <li><a href="${pageContext.request.contextPath}/">Home</a></li>
+    <li><a href="${pageContext.request.contextPath}/customer/showFormAdd">Add Customer</a></li>
     <li><a href="customer/list">Customer List</a></li>
   </ul>
 </nav> 
